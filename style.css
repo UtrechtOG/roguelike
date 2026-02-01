@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 25px;
 }
 
 h1 {
@@ -21,33 +21,48 @@ h1 {
 
 #game {
     display: grid;
-    grid-template-columns: repeat(10, 36px);
+    grid-template-columns: repeat(20, 32px);
     gap: 2px;
     margin-bottom: 20px;
 }
 
 .tile {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
 }
 
-.wall { background: #222; }
+/* MAP */
+.wall  { background: #222; }
 .floor { background: #111; }
 
+/* ENTITIES */
 .player {
-    background: #fff;
+    background: #ffffff;
 }
 
 .enemy {
-    background: #b084ff;
+    background: #ff3b3b;
 }
 
 .portal {
     border: 2px solid #b084ff;
-    box-shadow: 0 0 15px rgba(176,132,255,0.6);
+    animation: portalPulse 1.6s infinite;
 }
 
-/* CONTROLS */
+/* PORTAL ANIMATION */
+@keyframes portalPulse {
+    0% {
+        box-shadow: 0 0 6px rgba(176,132,255,0.4);
+    }
+    50% {
+        box-shadow: 0 0 18px rgba(176,132,255,0.9);
+    }
+    100% {
+        box-shadow: 0 0 6px rgba(176,132,255,0.4);
+    }
+}
+
+/* CONTROLS (IMMER SICHTBAR) */
 .controls {
     display: flex;
     flex-direction: column;
@@ -61,8 +76,8 @@ h1 {
 }
 
 .controls button {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     font-size: 1.4rem;
     background: rgba(176,132,255,0.15);
     border: 1px solid rgba(176,132,255,0.6);
@@ -72,14 +87,8 @@ h1 {
 }
 
 .controls button:active {
-    transform: scale(0.95);
+    transform: scale(0.94);
     box-shadow: 0 0 25px rgba(176,132,255,0.6);
-}
-
-@media (min-width: 768px) {
-    .controls {
-        display: none;
-    }
 }
 
 .hint {
