@@ -2,13 +2,13 @@ function resetGame() {
     currentRoom = 0;
     map = rooms[currentRoom];
     player.x = 1;
-    player.y = 1;
-    enemies = [{ x: 7, y: 8 }];
+    player.y = 18;
+    enemies = [{ x: 9, y: 18 }];
     drawMap(player, enemies);
 }
 
 function nextRoom() {
-    alert("You escaped the room!");
+    alert("Checkpoint reached!");
     resetGame();
 }
 
