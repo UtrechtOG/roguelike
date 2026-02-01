@@ -1,4 +1,4 @@
-let enemies = [{ x: 7, y: 8 }];
+let enemies = [{ x: 9, y: 18 }];
 
 function moveEnemies() {
     enemies.forEach(enemy => {
@@ -9,7 +9,7 @@ function moveEnemies() {
         else if (map[enemy.y][enemy.x + dx] === 0) enemy.x += dx;
 
         if (enemy.x === player.x && enemy.y === player.y) {
-            alert("Caught!");
+            alert("You were caught!");
             resetGame();
         }
     });
