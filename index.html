@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Midnight Roguelike</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <h1>Midnight Roguelike</h1>
+
+    <div id="game"></div>
+
+    <div class="controls">
+        <button data-dir="up">▲</button>
+        <div class="middle">
+            <button data-dir="left">◀</button>
+            <button data-dir="down">▼</button>
+            <button data-dir="right">▶</button>
+        </div>
+    </div>
+
+    <p class="hint">Reach the portal to escape</p>
+
+    <script src="rooms.js"></script>
+    <script src="map.js"></script>
+    <script src="player.js"></script>
+    <script src="enemy.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
