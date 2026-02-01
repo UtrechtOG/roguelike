@@ -1,4 +1,4 @@
-const player = { x: 1, y: 1 };
+const player = { x: 1, y: 18 };
 
 function movePlayer(dx, dy) {
     const nx = player.x + dx;
